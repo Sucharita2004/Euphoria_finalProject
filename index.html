@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Topbar & Navbar</title>
+    <!--Font Awesome icons cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/brands.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/regular.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/solid.min.css">
+    <!-- css link -->
+    <link rel="stylesheet" href="./output/style.css">
+</head>
+
+<body class="font-sans">
+    <header class="bg-blue-300">
+        <!-- ===== Topbar ===== -->
+        <div class="bg-black text-white text-sm">
+            <div class="max-w-7xl ms-auto px-4 py-3 flex justify-end">
+                <span class="px-4"><i class="fa-solid fa-phone text-pink"></i> +91 000 123 00</span>
+                <span class="px-4"><i class="fa-regular fa-envelope text-pink"></i> contact1234@example.com</span>
+                <span class="px-4"><i class="fa-solid fa-location-dot text-pink"></i> Lassen, Yuba City,
+                    California</span>
+            </div>
+        </div>
+        <!-- ===== Navbar ===== -->
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center ">
+
+                <!-- Logo -->
+                <div class="text-xl font-bold text-blue-600">
+                    <a href="#">
+                        <img src="./images/others/logo.png" alt="logo">
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-6">
+                    <ul class="md:flex space-x-6">
+                        <li><a href="#" class="text-white  hover:text-blue-600 active">HOME</a></li>
+                        <li><a href="#" class="text-white  hover:text-blue-600">SERVICES <i
+                                    class="fa-solid fa-caret-down"></i></a></li>
+                        <li><a href="#" class="text-white hover:text-blue-600">SHOP</a></li>
+                        <li> <a href="#" class="text-white  hover:text-blue-600">ABOUT <i
+                                    class="fa-solid fa-caret-down"></i></a></li>
+                        <li><a href="#" class="text-white  hover:text-blue-600">NEWS <i
+                                    class="fa-solid fa-caret-down"></i></a></li>
+                        <li> <a href="#" class="text-white  hover:text-blue-600">CONTACT</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="menuBtn" class="md:hidden text-gray-700 focus:outline-none">
+                    ☰
+                </button>
+                <!-- nav icons -->
+                <div>
+                    <ul class="flex">
+                        <li><a href="#"><i class="fa-solid fa-magnifying-glass text-white ms-7"></i></a></li>
+                        <li><a href="#"><i class="fa-solid fa-cart-shopping text-white ms-7"></i></a></li>
+                        <li><a href="#"><i class="fa-regular fa-user text-white ms-7"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <nav class="flex flex-col p-4 space-y-3">
+                <a href="#" class="text-white  hover:text-blue-600 active">HOME</a>
+                    <a href="#" class="text-white  hover:text-blue-600">SERVICES </a>
+                    <a href="#" class="text-white hover:text-blue-600">SHOP</a>
+                    <a href="#" class="text-white  hover:text-blue-600">ABOUT</a>
+                    <a href="#" class="text-white  hover:text-blue-600">NEWS</a>
+                    <a href="#" class="text-white  hover:text-blue-600">CONTACT</a>
+            </nav>
+        </div> -->
+    </header>
+    <main>
+        <!-- FAQ section -->
+        <section>
+            <div class="container bg-babypink">
+                <div class="max-w-7xl mx-auto px-4 pt-12 pb-70">
+                    <div class="flex flex-col lg:flex-row items-start gap-10">
+
+                        <!-- Left Side: FAQs -->
+                        <div class="w-full lg:w-1/2 space-y-4">
+                            <div class="flex items-center">
+                                <img src="./images/products/faq.png" alt="FAQ">
+                                <h2 class="text-1xl font-bold text-gray-900 mb-6 text-pink">FAQ</h2>
+                            </div>
+                            <h3 class="text-4xl mb-10">Most Common Question?</h3>
+
+                            <!-- FAQ Items -->
+                            <div class="faq-item pb-4 cursor-pointer">
+                                <h3
+                                    class="faq-question font-semibold text-gray-800 flex justify-between items-center bg-white p-5">
+                                    Which ingredients are required for skin?
+                                    <div>
+                                        <span class="faq-icon slideDown"><i class="fa-solid fa-angle-down"></i></span>
+                                        <span><i class="fa-solid fa-angle-up slideUp"></i></span>
+                                    </div>
+                                </h3>
+                                <p class="faq-answer text-gray-600 mt-2 hidden">
+                                    There are many varitations of passages Lorem Ipsum but the majority have suffered
+                                    alterration in some form,by injected humour.
+                                </p>
+
+                            </div>
+
+                            <div class="faq-item pb-4 cursor-pointer">
+                                <h3
+                                    class="faq-question font-semibold text-gray-800 flex justify-between items-center bg-white p-5">
+                                    What is included in your services?
+                                    <div>
+                                        <span class="faq-icon slideDown1"><i class="fa-solid fa-angle-down"></i></span>
+                                        <span><i class="fa-solid fa-angle-up slideUp1"></i></span>
+                                    </div>
+                                </h3>
+                                <p class="faq-answer1 text-gray-600 mt-2 hidden flex justify-between items-center ">
+                                    There are many varitations of passages Lorem Ipsum but the majority have suffered
+                                    alterration in some form, by injected humour.
+                                </p>
+                            </div>
+
+                            <div class="faq-item  pb-4 cursor-pointer">
+                                <h3
+                                    class="faq-question font-semibold text-gray-800 flex justify-between items-center bg-white p-5">
+                                    What we should do if our skin gets day?
+                                    <div>
+                                        <span class="faq-icon slideDown2"><i class="fa-solid fa-angle-down"></i></span>
+                                        <span><i class="fa-solid fa-angle-up slideUp2"></i></span>
+                                    </div>
+                                </h3>
+                                <p class="faq-answer2 text-gray-600 mt-2 hidden flex justify-between items-center ">
+                                    There are many variations of passages Lorem Ipsum but the majority have suffered
+                                    alteration in some form,by injected humour.
+                                </p>
+                            </div>
+
+                            <div class="faq-item  pb-4 cursor-pointer">
+                                <h3
+                                    class="faq-question font-semibold text-gray-800 flex justify-between items-center bg-white p-5">
+                                    What type of company is measured?
+                                    <div>
+                                        <span class="faq-icon slideDown3"><i class="fa-solid fa-angle-down"></i></span>
+                                        <span><i class="fa-solid fa-angle-up slideUp3"></i></span>
+                                    </div>
+                                </h3>
+                                <p class="faq-answer3 text-gray-600 mt-2 hidden flex justify-between items-center ">
+                                    There are many variations of passages Lorem Ipsum but the majority have suffered
+                                    alteration in some form,by injected humour.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Right Side: Image -->
+                        <div class="w-full lg:w-1/2 relative">
+                            <!-- Bottom Image -->
+                            <img src="./images/products/faq1.png" alt="FAQ Bottom Image"
+                                class="md:w-[300px] lg:w-[510px]  h-auto object-contain rounded-lg">
+
+                            <!-- Top Image -->
+                            <img src="./images/products/faq2.png" alt="FAQ Top Image" class="absolute top-4/7 left-1/5
+              md:w-[100px] h-auto lg:w-[420px] h-auto object-contain rounded-lg ">
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+        <!-- nature part -->
+        <section>
+            <div class="container max-w-7xl mx-auto px-4 py-10">
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+
+                    <!-- Image 1 -->
+                    <div class="flex justify-center">
+                        <img src="./images/products/natural1.png" alt="Image 1"
+                            class="w-full max-w-[124px] object-contain">
+                    </div>
+
+                    <!-- Image 2 -->
+                    <div class="flex justify-center">
+                        <img src="./images/products/natural2.png" alt="Image 2"
+                            class="w-full max-w-[130px] object-contain">
+                    </div>
+
+                    <!-- Image 3 -->
+                    <div class="flex justify-center">
+                        <img src="./images/products/natural3.png" alt="Image 3"
+                            class="w-full max-w-[142px] object-contain">
+                    </div>
+
+                    <!-- Image 4 -->
+                    <div class="flex justify-center">
+                        <img src="./images/products/natural4.png" alt="Image 4"
+                            class="w-full max-w-[161px] object-contain">
+                    </div>
+
+                    <!-- Image 5 -->
+                    <div class="flex justify-center">
+                        <img src="./images/products/natural5.png" alt="Image 5"
+                            class="w-full max-w-[98px] object-contain">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+    <!-- footer -->
+    <footer class="bg-greay text-gray-300 font-display1">
+        <div class="max-w-7xl mx-auto px-4 py-20">
+
+            <!-- Footer Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div>
+                    <a href="#">
+                        <img src="./images/others/logo.png" alt="logo">
+                    </a>
+                    <ul>
+                        <li class="text-sm leading-relaxed max-w-xs mb-4">Phasellus ultricies aliquam volutpat
+                            ullamcorper laoreet neque, a lacinia curabitur lacinia
+                            mollis.</li>
+                        <li class="hover:text-pink"><a href="#"> <i class="fa-solid fa-location-dot text-pink mb-3"></i>
+                                Lassen, Yuba City, California</a></li>
+                        <li class="hover:text-pink"><a href="#"><i class="fa-solid fa-phone text-pink mb-3"></i>+91 000
+                                123 00</a></li>
+                        <div>
+                            <ul class="flex  gap-4">
+                                <li><a href="#"><i class="fa-brands fa-facebook-f hover:text-pink"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-instagram hover:text-pink"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-x-twitter hover:text-pink"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-youtube hover:text-pink"></i></a></li>
+                            </ul>
+                        </div>
+                    </ul>
+
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4 font-display">Quick Link</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> About Euphoria</a></li>
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Our Services</a></li>
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Our Shop</a></li>
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Our Blog</a></li>
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4 font-display">Our Services</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Body Sculpting</a></li>
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Stone Massage</a></li>
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Hair Restore</a></li>
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Sauna Relax</a></li>
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Thermal Bath</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4 font-display">Newsletters</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-pink transition">Sing Up For News & Get 30% Off for Your Next
+                                services.</a></li>
+                        <li><input type="text" placeholder="Your Email Address" class="bg-white text-black p-3 w-55">
+                        </li>
+                        <li class="mt-6"><a href="#"
+                                class="uppercase bg-pink px-19 py-3 text-white hover:text-pink hover:bg-white">subscribe</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+
+        </div>
+        <!-- Bottom Bar -->
+        <div
+            class="border-t border-gray-700 mt-12 pt-6 pb-20 text-sm flex justify-between md:flex justify-center items-center">
+            <div>
+                <p class="ms-28"> © 2024 Copyrights by <a href="#" class="hover:text-pink">Euphoria</a>. All Rights
+                    Reserved</p>
+            </div>
+            <div>
+                <ul class="flex">
+                    <li class="me-20">Terms & Condition</li>
+                    <li class="me-20 ">Privacy Policy</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

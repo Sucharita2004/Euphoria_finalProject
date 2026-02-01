@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@utility container{
+    max-width: 1690px;
+    padding-inline: 15px;
+    margin-inline: auto;
+}
+@theme{
+    --color-pink: #DE968D;
+    --color-black:#27252A;
+    --color-greay:#27252A;
+    --color-babypink:#FCF6F6;
+    --font-display:Marcellus;
+    --font-footer:Manrope;
+}
