@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Topbar & Navbar</title>
+    <title>Euphoria</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <!--Font Awesome icons cdn  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/brands.min.css">
@@ -80,8 +82,50 @@
         </div> -->
     </header>
     <main>
+        <!-- gallert part -->
+        <section class="gallery py-6">
+            <div class="container">
+                <h2 class="text-xl text-center py-3 font-medium">Follow Gallery</h2>
+            </div>
+             <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./images/products/Gallery.png" alt="gallery">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/products/Gallery1.png" alt="gallery1">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/products/Gallery2.png" alt="gallery2">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/products/Gallery3.png" alt="gallery3">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/products/Gallery.png" alt="gallery">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/products/Gallery1.png" alt="gallery1">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/products/Gallery2.png" alt="gallery2">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/products/Gallery3.png" alt="gallery3">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/products/Gallery4.png" alt="gallery4">
+                </div>
+            </div>
+
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        </section>
+       
         <!-- FAQ section -->
-        <section>
+        <section class="faq py-6">
             <div class="container bg-babypink">
                 <div class="max-w-7xl mx-auto px-4 pt-12 pb-70">
                     <div class="flex flex-col lg:flex-row items-start gap-10">
@@ -176,7 +220,7 @@
             </div>
         </section>
         <!-- nature part -->
-        <section>
+        <section class="nature py-5">
             <div class="container max-w-7xl mx-auto px-4 py-10">
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
@@ -308,6 +352,8 @@
             </div>
         </div>
     </footer>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <!-- jquery cdn -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./js/main.js"></script>

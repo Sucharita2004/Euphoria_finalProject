@@ -36,7 +36,7 @@ $(function () {
 
 
 
-   
+
     $(".faq-answer2").hide();
     $(".slideUp2").hide();
     $(".slideDown2").on("click", function () {
@@ -53,7 +53,7 @@ $(function () {
 
 
 
-    
+
     $(".faq-answer3").hide();
     $(".slideUp3").hide();
     $(".slideDown3").on("click", function () {
@@ -68,3 +68,35 @@ $(function () {
         $(".slideDown3").show();
     });
 })
+// swipper.js
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    },
+    breakpoints: {
+        "@0.00": {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        "@0.75": {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        "@1.00": {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        "@1.50": {
+            slidesPerView: 4,
+            spaceBetween: 20,
+        },
+    },
+});
+
