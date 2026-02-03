@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Euphoria Spa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./output/style.css">
+</head>
+
+<body class="bg-black">
+    <header>
+        <!-- Topbar -->
+        <div class="topbar bg-black">
+            <div class="container">
+                <div class="text-white text-sm top-0 left-0 w-full z-50">
+                    <div
+                        class="max-w-7xl ml-auto px-4 py-2 flex flex-col gap-2  sm:flex-row sm:items-center sm:justify-end sm:gap-0">
+                        <span class="flex items-center gap-2 sm:px-3 ">
+                            <i class="fa-solid fa-phone text-pink"></i>
+                            +91 000 123 00
+                        </span>
+
+                        <span class="flex items-center gap-2 sm:px-3 ">
+                            <i class="fa-regular fa-envelope text-pink"></i>
+                            contact1234@example.com
+                        </span>
+
+                        <span class="flex items-center gap-2 sm:px-3 ">
+                            <i class="fa-solid fa-location-dot text-pink"></i>
+                            Lassen, Yuba City, California
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ================= HEADER ================= -->
+        <div class="absolute top-0 left-0 w-full z-50">
+            <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 py-6 text-white">
+
+                <!-- Logo -->
+                <div class="flex items-center gap-2 text-xl font-semibold">
+                    <img src="./images/others/logo.png" alt="logo">
+                </div>
+
+                <!-- Desktop Menu -->
+                <ul class="hidden lg:flex items-center gap-8 text-sm uppercase tracking-wider">
+                    <li class="hover:text-pink cursor-pointer"><a href="#">Home</a></li>
+
+                    <!-- Dropdown -->
+                    <li class="relative group">
+                        <span class="cursor-pointer hover:text-pink"><a href="#">Services
+                                <i class="fa-solid fa-caret-down"></i></a>
+                        </span>
+
+                        <ul
+                            class="absolute top-8 left-0 bg-white text-gray-800 w-52 shadow-lg hidden group-hover:block">
+                            <li class="px-5 py-3 hover:text-pink"><a href="#">Service Details</a></li>
+                            <li class="px-5 py-3 hover:text-pink"><a href="#">Booking</a></li>
+                            <li class="px-5 py-3 hover:text-pink"><a href="#">Membership</a></li>
+                            <li class="px-5 py-3 hover:text-pink"><a href="#">Gift Card</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="hover:text-pink cursor-pointer"><a href="#">Shop</a></li>
+                    <li class="hover:text-pink cursor-pointer"><a href="#">About
+                            <i class="fa-solid fa-caret-down"></i></a>
+                    </li>
+                    <li class="hover:text-pink cursor-pointer"><a href="#">News
+                            <i class="fa-solid fa-caret-down"></i></a>
+                    </li>
+                    <li class="hover:text-pink cursor-pointer"><a href="#">Contact</a></li>
+                </ul>
+
+                <!-- Icons -->
+                <div class="hidden lg:flex gap-6 text-lg">
+                    <i class="fa-solid fa-magnifying-glass cursor-pointer"></i>
+                    <i class="fa-solid fa-cart-shopping cursor-pointer"></i>
+                    <i class="fa-regular fa-user cursor-pointer"></i>
+                </div>
+
+                <!-- Mobile Button -->
+                <button id="menuBtn" class="lg:hidden text-2xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </nav>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden bg-black/95 text-white px-6 py-6 lg:hidden">
+                <ul class="flex flex-col gap-4 uppercase">
+                    <li><a href="#">Home</a></li>
+                    <li id="mobileService" class="cursor-pointer"><a href="#">
+                            Services <i class="fa-solid fa-caret-down"></a></i>
+                    </li>
+                    <ul id="mobileDropdown" class="hidden pl-4 text-sm text-gray-300">
+                        <li class="py-2 hover:text-pink"><a href="#">Service Details</a></li>
+                        <li class="py-2 hover:text-pink"><a href="#">Booking</a></li>
+                        <li class="py-2 hover:text-pink"><a href="#">Membership</a></li>
+                        <li class="py-2 hover:text-pink"><a href="#">Gift Card</a></li>
+                    </ul>
+                    <li><a href="#">Shop
+                            <i class="fa-solid fa-caret-down"></i></a></li>
+                    </li>
+                    <li><a href="#">News
+                            <i class="fa-solid fa-caret-down"></i></a>
+                    </li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <!-- ================= HERO ================= -->
+        <section class="relative h-screen bg-cover bg-center"
+            style="background-image:url('./images/others/contact_banner.png');">
+
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black/60"></div>
+
+            <!-- Content -->
+            <div class="relative z-10 h-full flex items-center justify-center text-center px-4">
+                <div class=" text-white">
+                    <figure class="flex justify-center items-center">
+                        <img src="./images/products/faq.png" alt="faq" class="w-full max-w-[172px] mb-5">
+                    </figure>
+                    <h1 class="text-5xl text-white mb-6">Home Of Relax And Respite</h1>
+                    <p class="text-3xl text-white mb-6">The Best Spa Experience services you can Euphoria on</p>
+                    <p class="text-xl text-white">HOME>CONTACT</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, pariatur nostrum expedita quibusdam velit
+            saepe a accusantium at excepturi minus. Esse culpa quibusdam eos atque vitae natus? Totam eum tempore,
+            labore maxime itaque voluptatibus, veritatis harum facere autem magnam ab. Impedit soluta ipsa perspiciatis,
+            sint velit quisquam ut error aperiam expedita praesentium odit delectus cum iusto sapiente eum dolor
+            explicabo iure vero, vitae eos ab perferendis, dolores voluptate voluptatem? Natus expedita nam hic harum
+            incidunt doloremque blanditiis sit, dicta, consequatur dolor asperiores nihil quae velit. Iste, sequi?
+            Commodi, animi similique quo dolor, accusantium quidem modi quas dignissimos ab nemo rerum.
+        </section>
+        <section>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo id, velit a excepturi provident error cumque
+            autem eum at dolorum veniam ab modi minus ipsum? Eos deserunt dolorum totam accusantium odit suscipit quae.
+            Veniam animi perferendis inventore minus aut nam voluptate laboriosam perspiciatis eveniet alias, quia eos
+            assumenda soluta aliquid, id dolorem, sapiente libero earum culpa error est consectetur? Impedit labore
+            placeat quod aliquam quidem eos officia nisi laudantium? Quos dignissimos velit ad, quia consequatur
+            repudiandae aspernatur iste culpa cum itaque doloremque, alias est? Facere voluptas saepe nemo quod dolor
+            voluptatem magni labore nesciunt distinctio, quisquam nam nisi in ipsum iste? Iure numquam voluptas eaque
+            laborum harum provident repudiandae facere quam adipisci doloremque atque deleniti ab quos iusto fuga, modi
+            accusamus aperiam debitis? Vitae voluptate dolorum laboriosam laudantium maxime velit dolor fuga fugiat
+            unde, adipisci perspiciatis earum quis optio non iusto labore. Ipsa ab voluptatum ipsam, veritatis nisi
+            possimus laboriosam facere fugit vel ullam architecto ducimus qui aliquam, praesentium, distinctio odit
+            accusantium dolorum deserunt sunt. Facere repudiandae, quam repellendus et voluptatibus saepe earum nulla
+            iusto vero eaque suscipit quae perspiciatis perferendis corrupti quia deserunt quidem ab maxime? Rerum
+            impedit ullam, labore eos, harum at vitae, eaque adipisci itaque omnis unde odit accusantium quibusdam quae.
+            Possimus harum voluptatibus fuga expedita, quasi consectetur. Aliquam possimus ab cupiditate, quo
+            consequatur esse delectus error dignissimos. Tempora, exercitationem qui veritatis harum asperiores
+            voluptas, perferendis repudiandae ducimus quae veniam illo eveniet corporis ex ipsam, vel culpa excepturi
+            in. Eligendi magnam ex alias sed nostrum iure. Aliquid cumque iusto exercitationem explicabo, voluptatum
+            quam. Sunt voluptas nam obcaecati tempore rem sint dignissimos temporibus sit. Corporis illo ex eos delectus
+            commodi incidunt adipisci, earum quo! Id perspiciatis eos iusto maxime sunt, assumenda blanditiis accusamus
+            saepe nobis repudiandae ratione velit alias est deserunt, quia quo doloremque omnis eveniet, dolor sint cum
+            officia nisi aliquid ut! Quasi temporibus nemo suscipit deserunt error exercitationem dolor nesciunt.
+            Tenetur debitis ipsa ab odio iusto ut commodi ullam nesciunt quo impedit error temporibus obcaecati illum
+            atque nihil maiores magnam dolores odit doloribus, sed maxime ea! Pariatur alias repellat nihil corporis
+            quae corrupti facere laudantium minima quod rem eveniet adipisci debitis error, ratione esse voluptates,
+            exercitationem natus eos ex nostrum vitae, asperiores a. Consequatur autem reprehenderit iste, totam nisi
+            assumenda ullam iure ex. Id, ipsa omnis nemo explicabo dolores fugiat labore ea vero cum sint unde tenetur,
+            magnam molestias ipsam natus consectetur eligendi corrupti in atque quidem deserunt hic dicta. Veniam
+            molestias amet at corporis animi soluta esse quasi ex iure quis non blanditiis odit, explicabo fuga,
+            distinctio asperiores consequuntur. Deleniti omnis error aut rem, alias esse maiores molestias nemo?
+            Quisquam molestias ipsa atque veritatis quibusdam ipsam laudantium consectetur quidem consequatur qui natus
+            cupiditate quaerat, beatae necessitatibus optio quam animi modi eaque? Quae ipsa enim odio, a voluptatum
+            sapiente iusto aspernatur eum, itaque illum inventore molestias aliquid neque nam ipsum commodi soluta,
+            autem veniam consequuntur consectetur earum recusandae ducimus ea! Rerum tempore numquam commodi nulla
+            dolore animi aliquam ipsam nemo eum, ratione fugiat voluptates iure voluptatem?
+        </section>
+    </main>
+
+
+
+
+    <!-- ================= jQuery ================= -->
+    <script>
+        $("#menuBtn").click(function () {
+            $("#mobileMenu").slideToggle();
+        });
+
+        $("#mobileService").click(function () {
+            $("#mobileDropdown").slideToggle();
+        });
+    </script>
+
+</body>
+
+</html>

@@ -99,4 +99,11 @@ var swiper = new Swiper(".mySwiper", {
         },
     },
 });
+// toggler navbar
+$("#menuBtn").click(function () {
+            $("#mobileMenu").slideToggle();
+        });
 
+        $("#mobileService").click(function () {
+            $("#mobileDropdown").slideToggle();
+        });
