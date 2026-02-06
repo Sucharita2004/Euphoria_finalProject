@@ -5,6 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Euphoria</title>
+    <!--Flowbite css link  -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <!--Font Awesome icons cdn  -->
@@ -19,10 +21,10 @@
 
 <body class="font-sans">
     <header>
-        <!-- Topbar -->
+        <!-- TOPBAR -->
         <div class="topbar bg-black">
             <div class="container">
-                <div class="text-white text-sm top-0 left-0 w-full z-50">
+                <div class="text-white text-sm w-full">
                     <div
                         class="max-w-7xl ml-auto px-4 py-2 flex flex-col gap-2  sm:flex-row sm:items-center sm:justify-end sm:gap-0">
                         <span class="flex items-center gap-2 sm:px-3 ">
@@ -44,50 +46,43 @@
                 </div>
             </div>
         </div>
-        <!-- NAVBAR  -->
-        <div class="absolute top-0 left-0 w-full z-50">
-            <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 py-10 text-white">
+
+        <!-- NAVBAR -->
+        <div id="mainHeader" class="absolute top-10 left-0 w-full z-50 transition-all duration-300">
+            <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 text-white">
 
                 <!-- Logo -->
-                <div class="flex items-center gap-2 text-xl font-semibold">
-                    <img src="./images/others/logo.png" alt="logo">
-                </div>
+                <img src="./images/others/logo.png" alt="logo">
 
                 <!-- Desktop Menu -->
                 <ul class="hidden lg:flex items-center gap-8 text-sm uppercase tracking-wider">
-                    <li class="hover:text-pink cursor-pointer"><a href="#">Home</a></li>
+                    <li class="hover:text-pink"><a href="#">Home</a></li>
 
-                    <!-- Dropdown -->
                     <li class="relative group">
-                        <span class="cursor-pointer hover:text-pink"><a href="#">Services
-                                <i class="fa-solid fa-caret-down"></i></a>
-                        </span>
-
+                        <a href="#" class="hover:text-pink">Services <i class="fa-solid fa-caret-down"></i></a>
                         <ul
                             class="absolute top-8 left-0 bg-white text-gray-800 w-52 shadow-lg hidden group-hover:block">
                             <li class="px-5 py-3 hover:text-pink"><a href="#">Service Details</a></li>
-                            <li class="px-5 py-3 hover:text-pink"><a href="#">Booking</a></li>
+                            <li class="px-5 py-3 hover:text-pink"><a href="./booking.html">Booking</a></li>
                             <li class="px-5 py-3 hover:text-pink"><a href="#">Membership</a></li>
-                            <li class="px-5 py-3 hover:text-pink"><a href="#">Gift Card</a></li>
+                            <li class="px-5 py-3 hover:text-pink"><a href="./giftcard.html">Gift Card</a></li>
                         </ul>
                     </li>
 
-                    <li class="hover:text-pink cursor-pointer"><a href="#">Shop</a></li>
+                    <li class="hover:text-pink"><a href="#">Shop</a></li>
+
                     <li class="relative group">
-                        <span class="cursor-pointer hover:text-pink"><a href="#">ABOUT
-                                <i class="fa-solid fa-caret-down"></i></a>
-                        </span>
+                        <a href="#" class="hover:text-pink">About <i class="fa-solid fa-caret-down"></i></a>
                         <ul
                             class="absolute top-8 left-0 bg-white text-gray-800 w-52 shadow-lg hidden group-hover:block">
                             <li class="px-5 py-3 hover:text-pink"><a href="#">About Us</a></li>
-                            <li class="px-5 py-3 hover:text-pink"><a href="#">Gallery</a></li>
+                            <li class="px-5 py-3 hover:text-pink"><a href="./gallery.html">Gallery</a></li>
                             <li class="px-5 py-3 hover:text-pink"><a href="#">Our Team</a></li>
                         </ul>
                     </li>
+
                     <li class="relative group">
-                        <span class="cursor-pointer hover:text-pink"><a href="#">NEWS
-                                <i class="fa-solid fa-caret-down"></i></a>
-                        </span>
+                        <a href="#" class="hover:text-pink">News <i class="fa-solid fa-caret-down"></i></a>
                         <ul
                             class="absolute top-8 left-0 bg-white text-gray-800 w-52 shadow-lg hidden group-hover:block">
                             <li class="px-5 py-3 hover:text-pink"><a href="#">Blog</a></li>
@@ -95,14 +90,15 @@
                             <li class="px-5 py-3 hover:text-pink"><a href="#">Event</a></li>
                         </ul>
                     </li>
-                    <li class="hover:text-pink cursor-pointer"><a href="#">Contact</a></li>
+
+                    <li class="hover:text-pink"><a href="./contact.html">Contact</a></li>
                 </ul>
 
                 <!-- Icons -->
                 <div class="hidden lg:flex gap-6 text-lg">
-                    <i class="fa-solid fa-magnifying-glass cursor-pointer"></i>
-                    <i class="fa-solid fa-cart-shopping cursor-pointer"></i>
-                    <i class="fa-regular fa-user cursor-pointer"></i>
+                    <i class="fa-solid fa-magnifying-glass cursor-pointer hover:text-pink"></i>
+                    <i class="fa-solid fa-cart-shopping cursor-pointer hover:text-pink"></i>
+                    <i class="fa-regular fa-user cursor-pointer hover:text-pink"></i>
                 </div>
 
                 <!-- Mobile Button -->
@@ -115,21 +111,20 @@
             <div id="mobileMenu" class="hidden bg-black/95 text-white px-6 py-6 lg:hidden">
                 <ul class="flex flex-col gap-4 uppercase">
                     <li><a href="#">Home</a></li>
-                    <li id="mobileService" class="cursor-pointer"><a href="#">
-                            Services <i class="fa-solid fa-caret-down"></a></i>
+
+                    <li id="mobileService" class="cursor-pointer">
+                        Services <i class="fa-solid fa-caret-down"></i>
                     </li>
+
                     <ul id="mobileDropdown" class="hidden pl-4 text-sm text-gray-300">
                         <li class="py-2 hover:text-pink"><a href="#">Service Details</a></li>
                         <li class="py-2 hover:text-pink"><a href="#">Booking</a></li>
                         <li class="py-2 hover:text-pink"><a href="#">Membership</a></li>
                         <li class="py-2 hover:text-pink"><a href="#">Gift Card</a></li>
                     </ul>
-                    <li><a href="#">Shop
-                            <i class="fa-solid fa-caret-down"></i></a></li>
-                    </li>
-                    <li><a href="#">News
-                            <i class="fa-solid fa-caret-down"></i></a>
-                    </li>
+
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">News</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
@@ -137,63 +132,608 @@
     </header>
     <main>
         <!-- Banner part -->
-        <section class="relative h-[100vh] bg-cover bg-center py-100"
-            style="background-image:url('./images/others/banner1.png');">
-            <!-- Content -->
-            <div class="container relative z-10 h-full flex items-center justify-center px-4 w-[928px]">
-                <div class="text-white">
-                    <span class="text-xl text-pink font-display">WELCOME TO EUPHORIA SALON</span>
-                    <h1 class="text-6xl text-white mb-6">Get Service Incredible Spa Experience With Euphoria</h1>
-                    <p class="text-xl text-white w-[746px]">Everybody is looking for places where to relax and get more energy. In
-                        our wellness center silence, energy, beauty and vitality meet.</p>
-                    <div class="mt-12">
-                        <button type="submit"
-                            class="bg-pink text-white px-4 py-3 font-semibold hover:bg-black transition">
-                          BOOK NOW <i class="fa-solid fa-arrow-up-right"></i>
+        <div id="default-carousel" class="relative w-full" data-carousel="slide">
+            <!-- Carousel wrapper -->
+            <div class="relative h-[100vh] overflow-hidden rounded-base md:h-96">
+                <!-- Item 1 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="./images/others/banner1.png"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="banner1">
+                    <!-- Content -->
+                    <div class="container relative z-10 h-full flex items-center justify-center px-4 w-[928px]">
+                        <div class="text-white">
+                            <span class="text-xl text-pink font-display">WELCOME TO EUPHORIA SALON</span>
+                            <h1 class="text-6xl text-white mb-6">Get Service Incredible Spa Experience With Euphoria
+                            </h1>
+                            <p class="text-xl text-white w-[746px]">Everybody is looking for places where to relax and
+                                get more
+                                energy. In
+                                our wellness center silence, energy, beauty and vitality meet.</p>
+                            <div class="mt-12">
+                                <button type="submit"
+                                    class="bg-pink text-white px-4 py-3 font-semibold hover:bg-black transition">
+                                    BOOK NOW <i class="fa-solid fa-arrow-up-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="./images/others/banner1.png"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="banner2">
+                    <!-- Content -->
+                    <div class="container relative z-10 h-full flex items-center justify-center px-4 w-[928px]">
+                        <div class="text-white">
+                            <span class="text-xl text-pink font-display">WELCOME TO EUPHORIA SALON</span>
+                            <h1 class="text-6xl text-white mb-6">Get Service Incredible Spa Experience With Euphoria
+                            </h1>
+                            <p class="text-xl text-white w-[746px]">Everybody is looking for places where to relax and
+                                get more
+                                energy. In
+                                our wellness center silence, energy, beauty and vitality meet.</p>
+                            <div class="mt-12">
+                                <button type="submit"
+                                    class="bg-pink text-white px-4 py-3 font-semibold hover:bg-black transition">
+                                    BOOK NOW <i class="fa-solid fa-arrow-up-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="./images/others/banner1.png"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="banner3">
+                    <!-- Content -->
+                    <div class="container relative z-10 h-full flex items-center justify-center px-4 w-[928px]">
+                        <div class="text-white">
+                            <span class="text-xl text-pink font-display">WELCOME TO EUPHORIA SALON</span>
+                            <h1 class="text-6xl text-white mb-6">Get Service Incredible Spa Experience With Euphoria
+                            </h1>
+                            <p class="text-xl text-white w-[746px]">Everybody is looking for places where to relax and
+                                get more
+                                energy. In
+                                our wellness center silence, energy, beauty and vitality meet.</p>
+                            <div class="mt-12">
+                                <button type="submit"
+                                    class="bg-pink text-white px-4 py-3 font-semibold hover:bg-black transition">
+                                    BOOK NOW <i class="fa-solid fa-arrow-up-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slider indicators -->
+            <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+                <button type="button" class="w-5 h-1 rounded-base" aria-current="true" aria-label="Slide 1"
+                    data-carousel-slide-to="0"></button>
+                <button type="button" class="w-5 h-1 rounded-base" aria-current="false" aria-label="Slide 2"
+                    data-carousel-slide-to="1"></button>
+                <button type="button" class="w-5 h-1 rounded-base" aria-current="true" aria-label="Slide 3"
+                    data-carousel-slide-to="2"></button>
+            </div>
+        </div>
+        <!--About us  part-->
+        <section class="bg-white py-16 px-4">
+            <div class="container max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+                <!-- Column 1: Image -->
+                <div class="w-full">
+                    <img src="./images/others/about.png" alt="about" class="w-full h-full object-cover rounded-2xl" />
+                </div>
+
+                <!-- Column 2: Content -->
+                <div class="md:text-left">
+                    <p class="flex justify-center items-center text-xl text-pink mb-4"><img
+                            src="./images/products/faq.png" alt="faq">ABOUT US</p>
+                    <h2 class="text-5xl md:text-4xl text-gray-900">
+                        Welcome To Home Of Tranquility, Relaxation And Respite
+                    </h2>
+
+                    <p class="mt-4 text-gray-600 leading-relaxed">
+                        Everybody is looking for places where to relax and get more energy. In our wellness center
+                        silence, energy, beauty and vitality meet. The treatments we offer will refresh both your body
+                        and soul. We'll be glad to welcome you and recommend our facilities and services.
+                    </p>
+                    <div class="flex mt-6">
+                        <p class="pe-9">15M+ Happy Clients</p>
+                        <p>Comprehensive Solution</p>
+                    </div>
+                    <div class="mt-9">
+                        <button type="submit" class="bg-pink text-white px-6 py-3 hover:bg-black transition">
+                            KNOW MORE <i class="fa-solid fa-arrow-up-right"></i>
                         </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!--Glance part-->
+        <section class="relative  bg-cover bg-center py-16 px-4"
+            style="background-image:url('./images/others/glance_banner.png');">
+            <div class="container mx-auto">
+
+                <!-- Section Heading -->
+                <div class="text-center mb-12">
+                    <p class="flex justify-center items-center text-xl text-pink mb-4"><img
+                            src="./images/products/faq.png" alt="faq">OUR TREATMENT</p>
+
+                    <h2 class="text-3xl md:text-4xl font-serif text-gray-800">
+                        Treatments At A Glance
+                    </h2>
+                </div>
+
+                <!-- Treatments Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pb-20">
+
+                    <!-- Card -->
+                    <div class="text-center p-1 hover:shadow-lg transition">
+                        <figure>
+                            <img src="./images/others/TREATMENT 1 (1).png" alt="TREATMENT1" class="mx-auto">
+                        </figure>
+                    </div>
+
+                    <div class="text-center p-1 hover:shadow-lg transition">
+                        <figure>
+                            <img src="./images/others/TREATMENT 2 (1).png" alt="TREATMENT2" class="mx-auto">
+                        </figure>
+
+                    </div>
+
+                    <div class="text-center p-1 hover:shadow-lg transition">
+                        <figure>
+                            <img src="./images/others/TREATMENT 3 (1).png" alt="TREATMENT3" class="mx-auto">
+                        </figure>
+                    </div>
+
+                    <div class="text-center p-1 hover:shadow-lg transition">
+                        <figure>
+                            <img src="./images/others/TREATMENT 4 (1).png" alt="TREATMENT4" class="mx-auto">
+                        </figure>
+                    </div>
+
+                </div>
+                <!--Clock part  -->
+                <div
+                    class="absolute left-[300px] top-10 z-100 py-4 bg-black text-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+                    <!-- Column 1 -->
+                    <div class="p-4 border-r border-gray-300">
+                        <figure>
+                            <img src="./images/others/clock.png" alt="clock">
+                        </figure>
+                        <h3 class="text-3xl font-semibold mb-2">Opening Hours</h3>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div class="p-6 border-r border-gray-300">
+                        <h3 class="text-lg font-semibold mb-2 pt-9">Monday</h3>
+                        <p class="text-lg text-pink">
+                            09:00 Am - 17:00 Pm
+                        </p>
+                    </div>
+
+                    <!-- Column 3 -->
+                    <div class="p-6 border-r border-gray-300">
+                        <h3 class="text-lg font-semibold mb-2">Tuesday to Friday</h3>
+                        <p class="text-lg text-pink">
+                            08:00 Am - 18:00 Pm
+                        </p>
+                    </div>
+
+                    <!-- Column 4 -->
+                    <div class="p-6 border-gray-300">
+                        <h3 class="text-lg font-semibold mb-2">Saturday</h3>
+                        <p class="text-lg text-pink">
+                            08:00 Am - 21:00 Pm
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- gallert part -->
-        <section class="gallery py-6">
-            <div class="container">
-                <h2 class="text-xl text-center py-3 font-medium">Follow Gallery</h2>
+
+        <!-- Spa part-->
+        <section class="bg-white py-20 px-4">
+            <div class="container max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+                <!-- Column 1: Image -->
+                <div class="md:text-left px-20">
+                    <div class="text-left">
+                        <p class="flex justify-center items-center text-xl text-pink mb-4"><img
+                                src="./images/products/faq.png" alt="faq">WHAT ELSE WE DO</p>
+                    </div>
+                    <h2 class="text-5xl md:text-4xl text-gray-900">
+                        Get An Incredible Spa Experience With
+                    </h2>
+                    <span class="text-5xl md:text-4xl text-gray-900">Euphoria</span>
+                </div>
+
+                <!-- Column 2: Content -->
+
+                <div class="w-full pt-16">
+                    <img src="./images/others/spa.png" alt="Spa" class="w-full h-full object-cover rounded-2xl" />
+                </div>
+
             </div>
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="./images/products/Gallery.png" alt="gallery">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./images/products/Gallery1.png" alt="gallery1">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./images/products/Gallery2.png" alt="gallery2">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./images/products/Gallery3.png" alt="gallery3">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./images/products/Gallery.png" alt="gallery">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./images/products/Gallery1.png" alt="gallery1">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./images/products/Gallery2.png" alt="gallery2">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./images/products/Gallery3.png" alt="gallery3">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./images/products/Gallery.png" alt="gallery">
+        </section>
+        <!-- Animation part -->
+        <!-- <section class="overflow-hidden bg-white py-8">
+            <div class="container mx-auto max-w-full">
+
+              
+                <div class="whitespace-nowrap overflow-hidden animate-marquee-left">
+                    <div
+                        class="inline-block animate-marquee-left text-2xl md:text-4xl font-serif text-gray-600 select-none">
+                        AROMA THERAPY 🌿 BODY MASSAGE 🌿 SAUNA RELAX 🌿 HYDRO THERAPY 🌿 FACE MASK 🌿
+                        AROMA THERAPY 🌿 BODY MASSAGE 🌿 SAUNA RELAX 🌿 HYDRO THERAPY 🌿 FACE MASK 🌿
                     </div>
                 </div>
 
-                <!-- Add Arrows -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                
+                <div class="whitespace-nowrap overflow-hidden mt-4 animate-marquee-right">
+                    <div
+                        class="inline-block animate-marquee-right text-2xl md:text-4xl font-serif text-gray-600 select-none">
+                        AROMA THERAPY 🌿 BODY MASSAGE 🌿 SAUNA RELAX 🌿 HYDRO THERAPY 🌿 FACE MASK 🌿
+                        AROMA THERAPY 🌿 BODY MASSAGE 🌿 SAUNA RELAX 🌿 HYDRO THERAPY 🌿 FACE MASK 🌿
+                    </div>
+                </div>
+
+            </div>
+        </section> -->        
+        <!--New spa  -->
+        <section class="mx-auto px-6 py-20 text-center">
+            <div class="container">
+                <p class="flex justify-center items-center text-xl text-pink mb-4"><img src="./images/products/faq.png"
+                        alt="faq">SPECIAL TREATMENT</p>
+                <h2 class="text-5xl md:text-3xl Marcellus mb-12">Explore Our New Spa</h2>
+                <div class="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 Marcellus">
+                    <!-- Left side items -->
+                    <div class="flex flex-col gap-8 text-left max-w-xs md:max-w-sm">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-pink-100 rounded-full p-3">
+                                <img src="./images/products/Group1.png" alt="Quality Materials" />
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">Quality Materials</h3>
+                                <p class="text-gray-400 text-sm">The it is a long established fact that reader will be
+                                    distracted.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="bg-pink-100 rounded-full p-3">
+                                <img src="./images/products/Group2.png" alt="Oil Therapy" />
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">Oil Therapy</h3>
+                                <p class="text-gray-400 text-sm">The it is a long established fact that reader will be
+                                    distracted.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="bg-pink-100 rounded-full p-3">
+                                <img src="./images/products/Group3.png" alt="Body Massages" />
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">Body Massages</h3>
+                                <p class="text-gray-400 text-sm">The it is a long established fact that reader will be
+                                    distracted.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Center Image -->
+                    <div class="relative overflow-hidden border-4 border-pink-300 w-64 h-106 md:w-72 md:h-[390px]">
+                        <!-- <figure>
+                            <img src="./images/others/new_spa.png" alt="Spa model" class="w-full h-full object-cover" />
+                        </figure> -->
+                        <div class="">
+                            <figure class="h-[744px] w-[398px]">
+                                <img src="./images/others/new_spa1.png" alt="Leaf" class="object-contain" />
+                            </figure>
+                        </div>
+                    </div>
+                    <!-- Right side items -->
+                    <div class="flex flex-col gap-8 text-left max-w-xs md:max-w-sm">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-pink-100 rounded-full p-3">
+                                <img src="./images/products/group4.png" alt="Thai Massages" />
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">Thai Massages</h3>
+                                <p class="text-gray-400 text-sm">The it is a long established fact that reader will be
+                                    distracted.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="bg-pink-200 rounded-full p-3">
+                                <img src="./images/products/Group5.png" alt="Hot Stone Massage" />
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">Hot Stone Massage</h3>
+                                <p class="text-gray-400 text-sm">The it is a long established fact that reader will be
+                                    distracted.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="bg-purple-200 rounded-full p-3">
+                                <img src="./images/products/Group6.png" alt="Aromatherapy Massage" />
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">Aromatherapy Massage</h3>
+                                <p class="text-gray-400 text-sm">The it is a long established fact that reader will be
+                                    distracted.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- step part -->
+        <section class="relative bg-cover h-full bg-center pt-20 px-4"
+            style="background-image:url('./images/products/work.png');">
+            <div class="container">
+                <div class=" mx-auto  py-4">
+                    <!-- Headings -->
+                    <div class="text-center mb-6">
+                        <div class="flex justify-center items-center ">
+                            <figure>
+                                <img src="./images/others/card_logo.png" alt="faq" class="text-pink">
+                            </figure>
+                            <span class="text-pink font-footer uppercase text-xl font-semibold mt-7">Easy
+                                step</span>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl  text-black mt-3">
+                            How It Works?
+                        </h2>
+
+                    </div>
+
+                    <!-- 3 Column Row -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  mx-auto">
+
+                        <!-- Card 1 -->
+                        <div class=" text-center p-10">
+                            <img src="./images/products/step1.png" alt="Step 1" class="w-20 h-20 mx-auto mb-6" />
+                            <h3 class="text-xl font-semibold mb-2">
+                                Make an Appointment
+                            </h3>
+                            <p class="text-gray-600 px-10">
+                                In a free hour, when our power of choice is untrammelled when nothing prevents
+                                dolor sit amet consectetur.
+                            </p>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="text-center p-10">
+                            <img src="./images/products/step2.png" alt="Step 2" class="w-20 h-20 mx-auto mb-6" />
+                            <h3 class="text-xl font-semibold mb-2">
+                                Get Consultation
+                            </h3>
+                            <p class="text-gray-600 px-10">
+                                In a free hour, when our power of choice is untrammelled when nothing prevents
+                                dolor sit amet consectetur.
+                            </p>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="text-center p-10">
+                            <img src="./images/products/step3.png" alt="Step 3" class="w-20 h-20 mx-auto mb-6" />
+                            <h3 class="text-xl font-semibold mb-2">
+                                Enjoy Our Massages
+                            </h3>
+                            <p class="text-gray-600 px-10">
+                                In a free hour, when our power of choice is untrammelled when nothing prevents
+                                dolor sit amet consectetur.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class=" border border-gray-300 bg-pink text-white mt-9">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 py-6">
+
+                        <!-- Column 1 -->
+                        <div class="flex justify-start  items-start py-8 px-5 border-r border-gray-300">
+                            <figure class="h-[50px] w-[50px]">
+                                <img src="./images/products/award-04.png" alt="img" class="object-cover mr-4">
+                            </figure>
+                            <div class="ps-6">
+                                <h3 class="text-4xl font-semibold">25+</h3>
+                                <p class="text-base">
+                                    Year Of Experience
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Column 2 -->
+                        <div class="flex justify-start  items-start py-8 px-5 border-r border-gray-300">
+                            <figure class="h-[50px] w-[50px]">
+                                <img src="./images/products/smile.png" alt="img" class="object-cover mr-4">
+                            </figure>
+                            <div class="ps-6">
+                                <h3 class="text-4xl font-semibold">10k +</h3>
+                                <p class="text-base">
+                                    Happy Clients
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Column 3 -->
+                        <div class="flex justify-start  items-start py-8 px-5 border-r border-gray-300">
+                            <figure class="h-[50px] w-[50px]">
+                                <img src="./images/products/manager.png" alt="img" class="object-cover mr-4">
+                            </figure>
+                            <div class="ps-6">
+                                <h3 class="text-4xl font-semibold">250+</h3>
+                                <p class="text-base">
+                                    Our Experts Teams
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Column 4 -->
+                        <div class="flex justify-start  items-start py-8 px-5 border-r border-gray-300">
+                            <figure class="h-[50px] w-[50px]">
+                                <img src="./images/products/education.png" alt="img" class="object-cover mr-4">
+                            </figure>
+                            <div class="ps-6">
+                                <h3 class="text-4xl font-semibold">15+</h3>
+                                <p class="text-base">Students Enroll</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Membership part -->
+        <section class="relative bg-cover bg-center bg-white py-16 px-4"
+            style="background-image:url('./images/others/membership_banner.png');">
+            <div class="container mx-auto">
+
+                <!-- Section Heading -->
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <p class="flex justify-center items-center text-xl text-pink mb-4">
+                        <img src="./images/products/faq.png" alt="faq" class="mr-2">MEMBERSHIP
+                    </p>
+                    <h2 class="text-5xl text-black mb-16 md:mb-20 lg:mb-24">Choose Our Pricing Plan</h2>
+                </div>
+
+                <!-- 3 Column Row -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Column 1 -->
+                    <div class="flex flex-col md:flex-row bg-gray-50 p-6 rounded-lg shadow">
+                        <img src="./images/others/membership1.png" alt="membership1"
+                            class="object-cover flex-shrink-0 w-full md:w-32 lg:w-40 mb-4 md:mb-0 md:mr-4">
+                        <div class="px-1 flex-1">
+                            <h3 class="text-xl font-semibold text-pink bg-lightpink px-1 py-1 mb-6 inline-block">
+                                Start Membership
+                            </h3>
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/others/checkmark-circle-04.png" alt="checkmark" class="h-6 w-6">
+                                    <p class="text-gray-600 text-sm">Aromatherapy Candles</p>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/others/checkmark-circle-04.png" alt="checkmark" class="h-6 w-6">
+                                    <p class="text-gray-600 text-sm">True Transformation</p>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/others/checkmark-circle-04.png" alt="checkmark" class="h-6 w-6">
+                                    <p class="text-gray-600 text-sm">Organic Essential Oils</p>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/others/checkmark-circle-04.png" alt="checkmark" class="h-6 w-6">
+                                    <p class="text-gray-600 text-sm">Meditation Retreats</p>
+                                </div>
+                            </div>
+                            <div class="mt-6">
+                                <button type="submit"
+                                    class="bg-pink text-white px-1 py-2 hover:bg-black transition inline-flex items-center gap-2">
+                                    BOOK NOW <i class="fa-solid fa-arrow-up-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div class="flex flex-col md:flex-row bg-gray-50 p-6 rounded-lg shadow">
+                        <img src="./images/others/membership2.png" alt="membership2"
+                            class="object-cover flex-shrink-0 w-full md:w-32 lg:w-40 mb-4 md:mb-0 md:mr-4">
+                        <div class="px-1 flex-1">
+                            <h3 class="text-xl font-semibold text-pink bg-lightpink px-1 py-1 mb-6 inline-block">
+                                Basic Membership
+                            </h3>
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/others/checkmark-circle-04.png" alt="checkmark" class="h-6 w-6">
+                                    <p class="text-gray-600 text-sm">Aromatherapy Candles</p>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/others/checkmark-circle-04.png" alt="checkmark" class="h-6 w-6">
+                                    <p class="text-gray-600 text-sm">True Transformation</p>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/others/checkmark-circle-04.png" alt="checkmark" class="h-6 w-6">
+                                    <p class="text-gray-600 text-sm">Organic Essential Oils</p>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/others/checkmark-circle-04.png" alt="checkmark" class="h-6 w-6">
+                                    <p class="text-gray-600 text-sm">Meditation Retreats</p>
+                                </div>
+                            </div>
+                            <div class="mt-6">
+                                <button type="submit"
+                                    class="bg-pink text-white px-1 py-2 hover:bg-black transition inline-flex items-center gap-2">
+                                    BOOK NOW <i class="fa-solid fa-arrow-up-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 3 -->
+                    <div class="flex flex-col md:flex-row bg-gray-50 p-6 rounded-lg shadow">
+                        <img src="./images/others/membership3.png" alt="membership3"
+                            class="object-cover flex-shrink-0 w-full md:w-32 lg:w-40 mb-4 md:mb-0 md:mr-4">
+                        <div class="px-1 flex-1">
+                            <h3 class="text-xl font-semibold text-pink bg-lightpink px-1 py-1 mb-6 inline-block">
+                                Premium Membership
+                            </h3>
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/others/checkmark-circle-04.png" alt="checkmark" class="h-6 w-6">
+                                    <p class="text-gray-600 text-sm">Aromatherapy Candles</p>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/others/checkmark-circle-04.png" alt="checkmark" class="h-6 w-6">
+                                    <p class="text-gray-600 text-sm">True Transformation</p>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/others/checkmark-circle-04.png" alt="checkmark" class="h-6 w-6">
+                                    <p class="text-gray-600 text-sm">Organic Essential Oils</p>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <img src="./images/others/checkmark-circle-04.png" alt="checkmark" class="h-6 w-6">
+                                    <p class="text-gray-600 text-sm">Meditation Retreats</p>
+                                </div>
+                            </div>
+                            <div class="mt-6">
+                                <button type="submit"
+                                    class="bg-pink text-white px-1 py-2 hover:bg-black transition inline-flex items-center gap-2">
+                                    BOOK NOW <i class="fa-solid fa-arrow-up-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- gallert part -->
+        <section class="gallery py-9">
+            <div class="container bg-babypink">
+                <h2 class="text-xl text-center py-3 font-medium">Follow Gallery</h2>
+
+                <div class="swiper gallerySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="./images/products/Gallery.png" alt=""></div>
+                        <div class="swiper-slide"><img src="./images/products/Gallery1.png" alt=""></div>
+                        <div class="swiper-slide"><img src="./images/products/Gallery2.png" alt=""></div>
+                        <div class="swiper-slide"><img src="./images/products/Gallery3.png" alt=""></div>
+                        <div class="swiper-slide"><img src="./images/products/Gallery.png" alt=""></div>
+                        <div class="swiper-slide"><img src="./images/products/Gallery1.png" alt=""></div>
+                        <div class="swiper-slide"><img src="./images/products/Gallery2.png" alt=""></div>
+                        <div class="swiper-slide"><img src="./images/products/Gallery3.png" alt=""></div>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="swiper-button-next gallery-next"></div>
+                    <div class="swiper-button-prev gallery-prev"></div>
+                </div>
             </div>
         </section>
 
@@ -281,8 +821,8 @@
                                 class="md:w-[300px] lg:w-[510px]  h-auto object-contain rounded-lg">
 
                             <!-- Top Image -->
-                            <img src="./images/products/faq2.png" alt="FAQ Top Image" class="absolute top-4/7 left-1/5
-              md:w-[100px] h-auto lg:w-[420px] h-auto object-contain rounded-lg ">
+                            <img src="./images/products/faq2.png" alt="FAQ Top Image"
+                                class="absolute top-4/7 left-1/5 w-55 h-55 md:w-[100px] h-auto lg:w-[420px] h-auto object-contain rounded-lg ">
                         </div>
 
 
@@ -436,6 +976,8 @@
             </div>
         </div>
     </footer>
+    <!--Flowbite js  -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <!-- jquery cdn -->

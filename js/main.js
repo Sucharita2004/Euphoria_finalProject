@@ -68,42 +68,69 @@ $(function () {
         $(".slideDown3").show();
     });
 })
-// swipper.js
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
+// GALLERY SWIPER 
+var gallerySwiper = new Swiper(".gallerySwiper", {
+    slidesPerView: 4,
     spaceBetween: 10,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
+    navigation: {
+        nextEl: ".gallery-next",
+        prevEl: ".gallery-prev",
     },
     breakpoints: {
-        "@0.00": {
-            slidesPerView: 1,
-            spaceBetween: 20,
-        },
-        "@0.75": {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-        "@1.00": {
-            slidesPerView: 3,
-            spaceBetween: 20,
-        },
-        "@1.50": {
-            slidesPerView: 4,
-            spaceBetween: 20,
-        },
+        320: { slidesPerView: 1 },
+        640: { slidesPerView: 2 },
+        768: { slidesPerView: 3 },
+        1024: { slidesPerView: 4 },
     },
 });
-// toggler navbar
-$("#menuBtn").click(function () {
-            $("#mobileMenu").slideToggle();
-        });
 
-        $("#mobileService").click(function () {
-            $("#mobileDropdown").slideToggle();
-        });
+
+// INSTAGRAM SWIPER 
+var instagramSwiper = new Swiper(".instagramSwiper", {
+    slidesPerView: 4,
+    spaceBetween: 10,
+    loop: true,
+    speed: 3000,
+    autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+    },
+    freeMode: true,
+    freeModeMomentum: false,
+    breakpoints: {
+        320: { slidesPerView: 1 },
+        640: { slidesPerView: 2 },
+        768: { slidesPerView: 3 },
+        1024: { slidesPerView: 4 },
+    },
+});
+// Sticky Navbar
+$(document).ready(function () {
+    var header = $("#mainHeader");
+    var headerOffset = header.offset().top;
+
+    $(window).on("scroll", function () {
+        if ($(window).scrollTop() > headerOffset) {
+            header
+                .removeClass("absolute top-10")
+                .addClass("fixed top-0 bg-black shadow-lg");
+        } else {
+            header
+                .removeClass("fixed top-0 bg-black shadow-lg")
+                .addClass("absolute top-10");
+        }
+    });
+    $("#menuBtn").click(function () {
+        $("#mobileMenu").slideToggle();
+    });
+    $("#mobileService").click(function () {
+        $("#mobileDropdown").slideToggle();
+    });
+
+});
+
+
+
+
+
+

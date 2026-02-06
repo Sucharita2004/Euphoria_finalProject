@@ -17,12 +17,12 @@
     <link rel="stylesheet" href="./output/style.css">
 </head>
 
-<body class="font-sans">
-    <header class="absolute top-0 left-0 w-full z-50">
-        <!-- Topbar -->
-        <!-- <div class="topbar bg-black">
+<body class="font-sans font-normal">
+    <header>
+        <!-- TOPBAR -->
+        <div class="topbar bg-black">
             <div class="container">
-                <div class="text-white text-sm fixed top-0 left-0 w-full z-50">
+                <div class="text-white text-sm w-full">
                     <div
                         class="max-w-7xl ml-auto px-4 py-2 flex flex-col gap-2  sm:flex-row sm:items-center sm:justify-end sm:gap-0">
                         <span class="flex items-center gap-2 sm:px-3 ">
@@ -43,255 +43,345 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
 
+        <!-- NAVBAR -->
+        <div id="mainHeader" class="absolute top-10 left-0 w-full z-50 transition-all duration-300">
+            <nav class="max-w-7xl mx-auto flex items-center justify-between px-4 text-white">
 
+                <!-- Logo -->
+                <img src="./images/others/logo.png" alt="logo">
 
+                <!-- Desktop Menu -->
+                <ul class="hidden lg:flex items-center gap-8 text-sm uppercase tracking-wider">
+                    <li class="hover:text-pink"><a href="#">Home</a></li>
+
+                    <li class="relative group">
+                        <a href="#" class="hover:text-pink">Services <i class="fa-solid fa-caret-down"></i></a>
+                        <ul
+                            class="absolute top-8 left-0 bg-white text-gray-800 w-52 shadow-lg hidden group-hover:block">
+                            <li class="px-5 py-3 hover:text-pink"><a href="#">Service Details</a></li>
+                            <li class="px-5 py-3 hover:text-pink"><a href="./booking.html">Booking</a></li>
+                            <li class="px-5 py-3 hover:text-pink"><a href="#">Membership</a></li>
+                            <li class="px-5 py-3 hover:text-pink"><a href="./giftcard.html">Gift Card</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="hover:text-pink"><a href="#">Shop</a></li>
+
+                    <li class="relative group">
+                        <a href="#" class="hover:text-pink">About <i class="fa-solid fa-caret-down"></i></a>
+                        <ul
+                            class="absolute top-8 left-0 bg-white text-gray-800 w-52 shadow-lg hidden group-hover:block">
+                            <li class="px-5 py-3 hover:text-pink"><a href="#">About Us</a></li>
+                            <li class="px-5 py-3 hover:text-pink"><a href="./gallery.html">Gallery</a></li>
+                            <li class="px-5 py-3 hover:text-pink"><a href="#">Our Team</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="relative group">
+                        <a href="#" class="hover:text-pink">News <i class="fa-solid fa-caret-down"></i></a>
+                        <ul
+                            class="absolute top-8 left-0 bg-white text-gray-800 w-52 shadow-lg hidden group-hover:block">
+                            <li class="px-5 py-3 hover:text-pink"><a href="#">Blog</a></li>
+                            <li class="px-5 py-3 hover:text-pink"><a href="#">Testimonial</a></li>
+                            <li class="px-5 py-3 hover:text-pink"><a href="#">Event</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="hover:text-pink"><a href="./contact.html">Contact</a></li>
+                </ul>
+
+                <!-- Icons -->
+                <div class="hidden lg:flex gap-6 text-lg">
+                    <i class="fa-solid fa-magnifying-glass cursor-pointer hover:text-pink"></i>
+                    <i class="fa-solid fa-cart-shopping cursor-pointer hover:text-pink"></i>
+                    <i class="fa-regular fa-user cursor-pointer hover:text-pink"></i>
+                </div>
+
+                <!-- Mobile Button -->
+                <button id="menuBtn" class="lg:hidden text-2xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </nav>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden bg-black/95 text-white px-6 py-6 lg:hidden">
+                <ul class="flex flex-col gap-4 uppercase">
+                    <li><a href="#">Home</a></li>
+
+                    <li id="mobileService" class="cursor-pointer">
+                        Services <i class="fa-solid fa-caret-down"></i>
+                    </li>
+
+                    <ul id="mobileDropdown" class="hidden pl-4 text-sm text-gray-300">
+                        <li class="py-2 hover:text-pink"><a href="#">Service Details</a></li>
+                        <li class="py-2 hover:text-pink"><a href="#">Booking</a></li>
+                        <li class="py-2 hover:text-pink"><a href="#">Membership</a></li>
+                        <li class="py-2 hover:text-pink"><a href="#">Gift Card</a></li>
+                    </ul>
+
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </header>
 
-
-    <body class="font-normal">
-
-        <main>
-            <!-- gift card part -->
-            <section class="giftcard py-24 bg-gray-50 text-center">
-                <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-                    <!-- Section Heading -->
-                    <div class="flex justify-center items-center">
-                        <figure>
-                            <img src="./images/others/card_logo.png" alt="faq" class="text-pink">
-                        </figure>
-                        <span class="text-pink font-footer uppercase text-xl font-semibold mt-7">WHAT WE DO</span>
-                    </div>
-                    <h2 class="text-5xl sm:text-4xl text-gray-900 mb-15 font-display">
-                        Explore Our Gift Cards
-                    </h2>
-
-                    <!-- Cards Grid -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div class="bg-cover bg-center p-6 text-black h-72 bg-babypink hover:shadow-lg transition hover:bg-black"
-                            style="background-image: url('./images/others/gift_card.png')">
-                            <h3 class="text-3xl py-8">Thai Massage</h3>
-                            <p class="text-pink text-1xl pb-5">$29.00 to $49.00</p>
-                            <p class="text-lg">987654</p>
-                            <p class="text-base text-gray-600">PROMO CODE</p>
-                        </div>
-
-
-                        <div class="bg-cover bg-center p-6 text-black h-72 bg-babypink hover:bg-black"
-                            style="background-image: url('./images/others/gift_card.png')">
-                            <h3 class="text-3xl py-8">Divine Facial</h3>
-                            <p class="text-pink text-1xl pb-5">$29.00 to $49.00</p>
-                            <p class="text-lg">987654</p>
-                            <p class="text-base text-gray-600">PROMO CODE</p>
-                        </div>
-
-                        <div class="bg-cover bg-center p-6 text-black h-72 bg-babypink hover:bg-black"
-                            style="background-image: url('./images/others/gift_card.png')">
-                            <h3 class="text-3xl py-8">Swedish Massage</h3>
-                            <p class="text-pink text-1xl pb-5">$29.00 to $49.00</p>
-                            <p class="text-lg">987654</p>
-                            <p class="text-base text-gray-600">PROMO CODE</p>
-                        </div>
-
-                        <div class="bg-cover bg-center p-6 text-black h-72 bg-babypink hover:bg-black"
-                            style="background-image: url('./images/others/gift_card.png')">
-                            <h3 class="text-3xl py-8">Full Body Scrub</h3>
-                            <p class="text-pink text-1xl pb-5">$29.00 to $49.00</p>
-                            <p class="text-lg">987654</p>
-                            <p class="text-base text-gray-600">PROMO CODE</p>
-                        </div>
-
-                        <div class="bg-cover bg-center p-6 text-black h-72 bg-babypink hover:bg-black"
-                            style="background-image: url('./images/others/gift_card.png')">
-                            <h3 class="text-3xl py-8">Hair Regrowth</h3>
-                            <p class="text-pink text-1xl pb-5">$29.00 to $49.00</p>
-                            <p class="text-lg">987654</p>
-                            <p class="text-base text-gray-600">PROMO CODE</p>
-                        </div>
-
-                        <div class="bg-cover bg-center p-6 text-black h-72 bg-babypink hover:bg-black"
-                            style="background-image: url('./images/others/gift_card.png')">
-                            <h3 class="text-3xl py-8">Harmony Haven</h3>
-                            <p class="text-pink text-1xl pb-5">$29.00 to $49.00</p>
-                            <p class="text-lg">987654</p>
-                            <p class="text-base text-gray-600">PROMO CODE</p>
-                        </div>
-
-
-
-                    </div>
+    <main>
+        <!-- Banner part -->
+        <section class="relative h-screen bg-cover bg-center "
+            style="background-image:url('./images/others/gift_banner.png');">
+            <!-- Content -->
+            <div class="relative z-10 h-full flex items-center justify-center text-center px-4 ">
+                <div class=" text-white">
+                    <figure class="flex justify-center items-center">
+                        <img src="./images/products/faq.png" alt="faq" class=" max-w-[172px] mb-5">
+                    </figure>
+                    <h1 class="text-5xl text-white mb-6">Home Of Relax And Respite</h1>
+                    <p class="text-3xl text-gray-300 mb-6">The Best Spa Experience services you can Euphoria on</p>
+                    <p class="text-xl text-gray-300">HOME>SERVICES>GIFT CARD</p>
                 </div>
-            </section>
+            </div>
+        </section>
+        <!-- gift card part -->
+        <section class="giftcard py-24 bg-gray-50 text-center">
+            <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            <!-- gift vedio part-->
-            <section class=" vedio min-h-screen w-full bg-cover bg-center bg-no-repeat"
-                style="background-image: url('./images/others/giftcard.png');">
-            </section>
+                <!-- Section Heading -->
+                <div class="flex justify-center items-center">
+                    <figure>
+                        <img src="./images/others/card_logo.png" alt="faq" class="text-pink">
+                    </figure>
+                    <span class="text-pink font-footer uppercase text-xl font-semibold mt-7">WHAT WE DO</span>
+                </div>
+                <h2 class="text-5xl sm:text-4xl text-gray-900 mb-15 font-display">
+                    Explore Our Gift Cards
+                </h2>
 
-            <!--card part  -->
-            <section class="card bg-giftpink">
-                <div class="container">
-                    <section class="py-16">
-                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <!-- Cards Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-cover bg-center p-6 text-black h-72 bg-babypink hover:shadow-lg transition hover:bg-black"
+                        style="background-image: url('./images/others/gift_card.png')">
+                        <h3 class="text-3xl py-8">Thai Massage</h3>
+                        <p class="text-pink text-1xl pb-5">$29.00 to $49.00</p>
+                        <p class="text-lg">987654</p>
+                        <p class="text-base text-gray-600">PROMO CODE</p>
+                    </div>
 
-                                <!-- Left Content -->
-                                <div>
-                                    <div class="flex ">
-                                        <figure>
-                                            <img src="./images/others/card_logo.png" alt="faq" class="text-pink">
-                                        </figure>
-                                        <span class="text-pink font-footer uppercase text-xl font-semibold mt-7">Gift
-                                            Cards Available Now</span>
-                                    </div>
-                                    <h2 class="text-5xl sm:text-4xl text-gray-900 mb-4 font-display">
-                                        Pamper Your Loved One with our Gift Cards
-                                    </h2>
-                                    <p class="text-gray-600 text-base sm:text-lg mb-6">
-                                        You can now purchase Euphoria Spa gift cards in anticipation of our grand
-                                        opening. Treat yourself or surprise your loved ones with the promise of a unique
-                                        spa experience.
 
-                                    </p>
-                                    <button type="submit"
-                                        class="bg-pink text-white px-10 py-3 mt-20 hover:bg-black transition">
-                                        BUY NOW<i class="fa-solid fa-arrow-up-right"></i>
-                                    </button>
-                                </div>
+                    <div class="bg-cover bg-center p-6 text-black h-72 bg-babypink hover:bg-black"
+                        style="background-image: url('./images/others/gift_card.png')">
+                        <h3 class="text-3xl py-8">Divine Facial</h3>
+                        <p class="text-pink text-1xl pb-5">$29.00 to $49.00</p>
+                        <p class="text-lg">987654</p>
+                        <p class="text-base text-gray-600">PROMO CODE</p>
+                    </div>
 
-                                <!-- Right Image -->
-                                <div class="w-full">
-                                    <figure>
-                                        <img src="./images/others/gift_box.png" alt="Team working"
-                                            class="w-full h-full object-cover rounded-xl" />
-                                    </figure>
-                                </div>
+                    <div class="bg-cover bg-center p-6 text-black h-72 bg-babypink hover:bg-black"
+                        style="background-image: url('./images/others/gift_card.png')">
+                        <h3 class="text-3xl py-8">Swedish Massage</h3>
+                        <p class="text-pink text-1xl pb-5">$29.00 to $49.00</p>
+                        <p class="text-lg">987654</p>
+                        <p class="text-base text-gray-600">PROMO CODE</p>
+                    </div>
 
-                            </div>
-                        </div>
-                    </section>
+                    <div class="bg-cover bg-center p-6 text-black h-72 bg-babypink hover:bg-black"
+                        style="background-image: url('./images/others/gift_card.png')">
+                        <h3 class="text-3xl py-8">Full Body Scrub</h3>
+                        <p class="text-pink text-1xl pb-5">$29.00 to $49.00</p>
+                        <p class="text-lg">987654</p>
+                        <p class="text-base text-gray-600">PROMO CODE</p>
+                    </div>
+
+                    <div class="bg-cover bg-center p-6 text-black h-72 bg-babypink hover:bg-black"
+                        style="background-image: url('./images/others/gift_card.png')">
+                        <h3 class="text-3xl py-8">Hair Regrowth</h3>
+                        <p class="text-pink text-1xl pb-5">$29.00 to $49.00</p>
+                        <p class="text-lg">987654</p>
+                        <p class="text-base text-gray-600">PROMO CODE</p>
+                    </div>
+
+                    <div class="bg-cover bg-center p-6 text-black h-72 bg-babypink hover:bg-black"
+                        style="background-image: url('./images/others/gift_card.png')">
+                        <h3 class="text-3xl py-8">Harmony Haven</h3>
+                        <p class="text-pink text-1xl pb-5">$29.00 to $49.00</p>
+                        <p class="text-lg">987654</p>
+                        <p class="text-base text-gray-600">PROMO CODE</p>
+                    </div>
+
+
 
                 </div>
-            </section>
+            </div>
+        </section>
 
-        </main>
-        <!-- footer -->
-        <footer class="bg-greay text-gray-300 font-display1">
-            <div class="max-w-7xl mx-auto px-4 py-20">
+        <!-- gift vedio part-->
+        <section class=" vedio min-h-screen w-full bg-cover bg-center bg-no-repeat"
+            style="background-image: url('./images/others/giftcard.png');">
+        </section>
 
-                <!-- Footer Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-                    <div>
-                        <a href="#">
-                            <img src="./images/others/logo.png" alt="logo">
-                        </a>
-                        <ul>
-                            <li class="text-sm leading-relaxed max-w-xs mb-4">Phasellus ultricies aliquam volutpat
-                                ullamcorper laoreet neque, a lacinia curabitur lacinia
-                                mollis.</li>
-                            <li class="hover:text-pink"><a href="#"> <i
-                                        class="fa-solid fa-location-dot text-pink mb-3"></i>
-                                    Lassen, Yuba City, California</a></li>
-                            <li class="hover:text-pink"><a href="#"><i class="fa-solid fa-phone text-pink mb-3"></i>+91
-                                    000
-                                    123 00</a></li>
+        <!--card part  -->
+        <section class="card bg-giftpink">
+            <div class="container">
+                <section class="py-16">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+                            <!-- Left Content -->
                             <div>
-                                <ul class="flex  gap-4">
-                                    <li><a href="#"><i class="fa-brands fa-facebook-f hover:text-pink"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-instagram hover:text-pink"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-x-twitter hover:text-pink"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-youtube hover:text-pink"></i></a></li>
-                                </ul>
+                                <div class="flex ">
+                                    <figure>
+                                        <img src="./images/others/card_logo.png" alt="faq" class="text-pink">
+                                    </figure>
+                                    <span class="text-pink font-footer uppercase text-xl font-semibold mt-7">Gift
+                                        Cards Available Now</span>
+                                </div>
+                                <h2 class="text-5xl sm:text-4xl text-gray-900 mb-4 font-display">
+                                    Pamper Your Loved One with our Gift Cards
+                                </h2>
+                                <p class="text-gray-600 text-base sm:text-lg mb-6">
+                                    You can now purchase Euphoria Spa gift cards in anticipation of our grand
+                                    opening. Treat yourself or surprise your loved ones with the promise of a unique
+                                    spa experience.
+
+                                </p>
+                                <button type="submit"
+                                    class="bg-pink text-white px-10 py-3 mt-20 hover:bg-black transition">
+                                    BUY NOW<i class="fa-solid fa-arrow-up-right"></i>
+                                </button>
                             </div>
-                        </ul>
 
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-semibold text-white mb-4 font-display">Quick Link</h3>
-                        <ul class="space-y-3 text-sm">
-                            <li><a href="#" class="hover:text-pink transition"><i
-                                        class="fa-solid fa-angles-right text-pink"></i> About Euphoria</a></li>
-                            <li><a href="#" class="hover:text-pink transition"><i
-                                        class="fa-solid fa-angles-right text-pink"></i> Our Services</a></li>
-                            <li><a href="#" class="hover:text-pink transition"><i
-                                        class="fa-solid fa-angles-right text-pink"></i> Our Shop</a></li>
-                            <li><a href="#" class="hover:text-pink transition"><i
-                                        class="fa-solid fa-angles-right text-pink"></i> Our Blog</a></li>
-                            <li><a href="#" class="hover:text-pink transition"><i
-                                        class="fa-solid fa-angles-right text-pink"></i> Contact Us</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-semibold text-white mb-4 font-display">Our Services</h3>
-                        <ul class="space-y-3 text-sm">
-                            <li><a href="#" class="hover:text-pink transition"><i
-                                        class="fa-solid fa-angles-right text-pink"></i> Body Sculpting</a></li>
-                            <li><a href="#" class="hover:text-pink transition"><i
-                                        class="fa-solid fa-angles-right text-pink"></i> Stone Massage</a></li>
-                            <li><a href="#" class="hover:text-pink transition"><i
-                                        class="fa-solid fa-angles-right text-pink"></i> Hair Restore</a></li>
-                            <li><a href="#" class="hover:text-pink transition"><i
-                                        class="fa-solid fa-angles-right text-pink"></i> Sauna Relax</a></li>
-                            <li><a href="#" class="hover:text-pink transition"><i
-                                        class="fa-solid fa-angles-right text-pink"></i> Thermal Bath</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-semibold text-white mb-4 font-display">Newsletters</h3>
-                        <ul class="space-y-3 text-sm">
-                            <li><a href="#" class="hover:text-pink transition">Sing Up For News & Get 30% Off for Your
-                                    Next
-                                    services.</a></li>
-                            <li><input type="text" placeholder="Your Email Address"
-                                    class="bg-white text-black p-3 w-55">
-                            </li>
-                            <li class="mt-6"><a href="#"
-                                    class="uppercase bg-pink px-19 py-3 text-white hover:text-pink hover:bg-white">subscribe</a>
-                            </li>
-                        </ul>
-                    </div>
+                            <!-- Right Image -->
+                            <div class="w-full">
+                                <figure>
+                                    <img src="./images/others/gift_box.png" alt="Team working"
+                                        class="w-full h-full object-cover rounded-xl" />
+                                </figure>
+                            </div>
 
-                </div>
-
-
+                        </div>
+                    </div>
+                </section>
 
             </div>
-            <!-- Bottom Bar -->
-            <div class="border-t border-gray-700 mt-12 pt-6 pb-10">
-                <div class="max-w-7xl mx-auto px-4
+        </section>
+
+    </main>
+    <!-- footer -->
+    <footer class="bg-greay text-gray-300 font-display1">
+        <div class="max-w-7xl mx-auto px-4 py-20">
+
+            <!-- Footer Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div>
+                    <a href="#">
+                        <img src="./images/others/logo.png" alt="logo">
+                    </a>
+                    <ul>
+                        <li class="text-sm leading-relaxed max-w-xs mb-4">Phasellus ultricies aliquam volutpat
+                            ullamcorper laoreet neque, a lacinia curabitur lacinia
+                            mollis.</li>
+                        <li class="hover:text-pink"><a href="#"> <i class="fa-solid fa-location-dot text-pink mb-3"></i>
+                                Lassen, Yuba City, California</a></li>
+                        <li class="hover:text-pink"><a href="#"><i class="fa-solid fa-phone text-pink mb-3"></i>+91
+                                000
+                                123 00</a></li>
+                        <div>
+                            <ul class="flex  gap-4">
+                                <li><a href="#"><i class="fa-brands fa-facebook-f hover:text-pink"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-instagram hover:text-pink"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-x-twitter hover:text-pink"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-youtube hover:text-pink"></i></a></li>
+                            </ul>
+                        </div>
+                    </ul>
+
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4 font-display">Quick Link</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> About Euphoria</a></li>
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Our Services</a></li>
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Our Shop</a></li>
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Our Blog</a></li>
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4 font-display">Our Services</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Body Sculpting</a></li>
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Stone Massage</a></li>
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Hair Restore</a></li>
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Sauna Relax</a></li>
+                        <li><a href="#" class="hover:text-pink transition"><i
+                                    class="fa-solid fa-angles-right text-pink"></i> Thermal Bath</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4 font-display">Newsletters</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-pink transition">Sing Up For News & Get 30% Off for Your
+                                Next
+                                services.</a></li>
+                        <li><input type="text" placeholder="Your Email Address" class="bg-white text-black p-3 w-55">
+                        </li>
+                        <li class="mt-6"><a href="#"
+                                class="uppercase bg-pink px-19 py-3 text-white hover:text-pink hover:bg-white">subscribe</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+
+        </div>
+        <!-- Bottom Bar -->
+        <div class="border-t border-gray-700 mt-12 pt-6 pb-10">
+            <div class="max-w-7xl mx-auto px-4
            flex flex-col md:flex-row
            items-center md:items-center
            justify-between
            text-sm text-gray-400">
-                    <!-- Left: Copyright -->
-                    <p class="mb-4 md:mb-0 text-center md:text-left">
-                        © 2024 Copyrights by
-                        <a href="#" class="hover:text-pink font-medium">Euphoria</a>.
-                        All Rights Reserved
-                    </p>
+                <!-- Left: Copyright -->
+                <p class="mb-4 md:mb-0 text-center md:text-left">
+                    © 2024 Copyrights by
+                    <a href="#" class="hover:text-pink font-medium">Euphoria</a>.
+                    All Rights Reserved
+                </p>
 
-                    <!-- Right: Links -->
-                    <ul class="flex gap-6">
-                        <li>
-                            <a href="#" class="hover:text-pink">Terms &amp; Condition</a>
-                        </li>
-                        <li>
-                            <a href="#" class="hover:text-pink">Privacy Policy</a>
-                        </li>
-                    </ul>
-                </div>
+                <!-- Right: Links -->
+                <ul class="flex gap-6">
+                    <li>
+                        <a href="#" class="hover:text-pink">Terms &amp; Condition</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-pink">Privacy Policy</a>
+                    </li>
+                </ul>
             </div>
+        </div>
 
-        </footer>
+    </footer>
 
 
-        <!-- Swiper JS -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-        <!-- jquery cdn -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="./js/main.js"></script>
-    </body>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!-- jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
 
 </html>
